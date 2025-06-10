@@ -3,6 +3,15 @@ from flask import Flask, request, jsonify
 from pymongo import MongoClient
 from bson import ObjectId
 
+'''
+collection.insert_many([
+    {"SR.NO.":1 , "name": "John Doe" , "age" : 24},
+    {"SR.NO.":2 , "name": "Jane Smith", "age" : 25},
+    {"SR.NO.":3 , "name": "Prajakta Latane", "age" : 26},
+    {"SR.NO.":4 , "name": "Tulasi Dem", "age" : 28}
+])
+'''
+
 app = Flask(__name__)
 
 # Connect to MongoDB

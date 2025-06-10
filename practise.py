@@ -21,8 +21,10 @@ def serialize_doc(doc):
 
 @app.route('/data', methods=['GET'])
 def get_data():
-    data = [serialize_doc(doc) for doc in collection.find()]
+    data = [serialize_doc(doc) for doc in collection.find({"age" : 24})]
     return jsonify(data)
 
+if __name__ == "__main__":
+    app.run(debug=True)
 
 
